@@ -1,0 +1,6 @@
+<h2><%= @musician.name %></h2>
+<h3><%= @musician.city %></h3>
+
+<%= link_to "Edit", edit_musician_path(@musician) %>
+<%= link_to "Delete", musician_path(@musician), method: :delete, data: { confirm: "Are you sure?"} %>
+<%= link_to "Back", root_path %>

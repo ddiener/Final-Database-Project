@@ -1,0 +1,11 @@
+	<%= link_to "Add Artist", new_artist_path %>
+<div class="row">
+
+	<% @artists.each do |artist| %>
+	<div class="col-md-3">
+		<a href="/artists/<%= artist.id %>">
+			<%= image_tag artist.artist_img.url(:artist_index), class: "musician" %>
+		</a>
+	</div>
+	<% end %>
+	</div>

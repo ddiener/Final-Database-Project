@@ -1,0 +1,12 @@
+<div class="row">
+
+	<% @musicians.each do |musician| %>
+	<div class="col-md-3">
+		<a href="/musicians/<%= musician.id %>">
+			<%= image_tag musician.musician_img.url(:musician_index), class: "musician" %>
+		</a>
+	</div>
+	<% end %>
+</div>
+
+<%= link_to "Add Musician", new_musician_path %>

@@ -1,0 +1,7 @@
+<%= simple_form_for @artist do |f| %>
+
+<%= f.file_field :artist_img %>
+	<%= f.input :artistName, label: "Artist Name" %>
+	<%= f.input :beginDate %>
+	<%= f.button :submit %>
+<% end %> 

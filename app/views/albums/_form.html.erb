@@ -1,0 +1,9 @@
+<%= simple_form_for @album do |f| %>
+<%= f.file_field :album_img %>
+	<%= f.input :artistId, label: "Artist Name" %>
+	<%= f.input :albumName, label: "Album Name"%>
+	<%= f.input :releaseDate, label: "Relase Date"%>
+	<%= f.input :genreId, label: "Genre" %>
+	<%= f.input :labelId, label: "Label" %>
+	<%= f.button :submit %>
+<% end %>  

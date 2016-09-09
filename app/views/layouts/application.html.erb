@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Final</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="containter">
+			<div class="navbar-header">
+				<%= link_to "Genres", genres_path, class: "navbar-brand"%>
+				<%= link_to "Artists", artists_path, class: "navbar-brand"%>
+				<%= link_to "Albums", albums_path, class: "navbar-brand"%>
+			</div>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container">
+		<%= yield %>
+	</div>
+</body>
+</html>

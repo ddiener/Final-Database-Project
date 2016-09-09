@@ -1,0 +1,52 @@
+<!-- <div class="container search">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+		<h1>Search Musician Info</h1>
+		<br />
+		<br />
+			<div class="input-group searchbar">
+				<input type="text" class="form-control" name="x" placeholder="Search for...">
+				<span class="input-group-btn">
+					<button class="btn btn-default" type="button">
+						<span class="glyphicon glyphicon-search">
+						</span>
+					</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+-->
+<div class="container search">
+	<div class="row">
+		<div class="col-xs-8 col-xs-offset-2">
+			<h1>Search Musician Info</h1>
+			<br />
+			<br />
+			<%= form_tag musicians_path, :method => "get", id: "search-form", class: "input-group" do %>
+			<%= text_field_tag :search, params[:search], placeholder: "Search music", class: "form-control" %>
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button">
+					<span class="glyphicon glyphicon-search">
+					</span>
+				</button>
+			</span>
+			<%= submit_tag "Search" %>
+			<% end %>
+		</div>
+	</div>
+	<br />
+
+	<% if @musicians.present? %>
+	<% @musicians.each do |musician| %>
+	<div class="col-md-3">
+		<a href="/musicians/<%= musician.id %>">
+			<%= image_tag musician.musician_img.url(:musician_index), class: "musician" %>
+		</a>
+	</div>
+	<% end %>
+	<% else %>
+	<p>No musicians found</p>
+	<% end %>
+</div>

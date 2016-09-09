@@ -1,0 +1,7 @@
+<%= simple_form_for @musician do |f| %>
+
+	<%= f.file_field :musician_img %>
+	<%= f.input :name, label: "Artist Name" %>
+	<%= f.input :city, label: "City or Origin" %>
+	<%= f.button :submit %>
+<% end %>
